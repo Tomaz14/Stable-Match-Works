@@ -124,7 +124,7 @@ for number_of_file in range(len(csv_files_people)):  # index of file in the peop
         print(f'{categories[number_of_file]} is not a stable matching')
     match_data_frame = pd.DataFrame.from_dict(tentative_match, orient="index")  # create a csv file with all the matches
     match_data_frame.to_csv(f'{categories[number_of_file]}_match.csv')
-    if len(free_people) > 0:  # added all the people who could not find work
+    if len(free_people) > 0:  # added all the people who did not find work
         for people in free_people:
             people_not_accepted.append(people)
 print(f'{time.time() - start_time} IS THE TIME TO FINISH THE TASK')
